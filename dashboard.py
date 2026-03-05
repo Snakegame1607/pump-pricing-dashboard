@@ -16,11 +16,14 @@ st.markdown("### Strategic Pricing Analysis Tool")
 # FILE UPLOAD
 # --------------------------------------------------
 
-uploaded_file = st.file_uploader("Upload Rate Card File", type=["xlsx"])
+uploaded_file = st.file_uploader("Upload a new rate card (optional)", type=["xlsx"])
 
-if uploaded_file:
+default_file = "Comprehensive Rate card component B.xlsx"
 
+if uploaded_file is not None:
     df = pd.read_excel(uploaded_file)
+else:
+    df = pd.read_excel(default_file)
 
     df.columns = df.columns.str.strip()
 

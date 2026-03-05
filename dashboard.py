@@ -18,6 +18,8 @@ st.markdown("### Strategic Pricing Analysis Tool")
 
 uploaded_file = st.file_uploader("Upload a new rate card (optional)", type=["xlsx"])
 
+uploaded_file = st.file_uploader("Upload a new rate card (optional)", type=["xlsx"])
+
 default_file = "Comprehensive Rate card component B.xlsx"
 
 if uploaded_file is not None:

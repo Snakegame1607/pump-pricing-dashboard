@@ -31,9 +31,9 @@ uploaded_file = st.file_uploader("Upload a new rate card (optional)", type=["xls
 default_file = "Comprehensive Rate card component B.xlsx"
 
 if uploaded_file is not None:
-df = pd.read_excel(uploaded_file)
+    df = pd.read_excel(uploaded_file)
 else:
-df = pd.read_excel(default_file)
+    df = pd.read_excel(default_file)
 
 # --------------------------------------------------
 
